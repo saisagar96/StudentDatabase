@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title Student Results
+  body
+    fieldset(style='width:600px')
+      legend
+        b Student Input Section:
+      form#myForm(action='/savedata', method='POST')
+        | Rollno: 
+        input(type='number', name='Rollno', placeholder='Enter a valid rollno')
+        | 					Name: 
+        input(type='text', name='name', placeholder='Enter the name of a student')
+        br
+        br
+        table(border='1')
+          tbody
+            tr
+              td Mark1
+              td
+                input#txtEnglish(type='text')
+            tr
+              td Mark2
+              td
+                input#txtKannada(type='text')
+            tr
+              td Mark3
+              td
+                input#txtMaths(type='text')
+        br
+        input(type='button', value='Save', onclick='Save();')
+        input(type='button', onclick='myFunction()', ;='', value='Resetform')
+    script(type='text/javascript', src='./script.js')

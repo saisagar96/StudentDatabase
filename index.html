@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			
+			<title>Student Results</title>
+		</head>
+		<body>		
+				<fieldset style="width:600px">
+					<legend><b>Student Input Section:</b></legend>
+				<form id="myForm" action="/savedata" method="POST">
+					Rollno: <input type="number" name="Rollno" placeholder="Enter a valid rollno">
+					Name: <input type="text" name="name" placeholder="Enter the name of a student">
+					<br/>
+					<br/>
+					<table border="1">
+						<tr><td>Mark1</td><td><input type="text" id="txtEnglish"></td></tr>
+						<tr><td>Mark2</td><td><input type="text" id="txtKannada"></td></tr>
+						<tr><td>Mark3</td><td><input type="text" id="txtMaths"></td></tr>			
+					</table><br/>
+					<input type="button" value="Save" onClick="Save();">
+					<input type="button" onClick="myFunction()"; value="Resetform">
+				</form>
+				</fieldset>
+
+				<script type="text/javascript" src="./script.js"></script>
+		</body>
+	</html>

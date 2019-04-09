@@ -1,0 +1,28 @@
+var express = require("express");
+var mongodb = require("mongodb");
+// var mongoose = require("mongoose");
+var bodyParser = require("body-Parser");
+var app = express();
+var MongoClient = mongodb.MongoClient();
+
+var PORT = 3000;
+
+    app.set('view engine','jade');
+    var dburl = 'mongodb://localhost:27017/Student Database';
+
+        app.get('/', function(req, res) {
+            res.render('index');
+        });
+
+        app.get('/Resetform', function(req, res) {
+            res.render('Resetform');
+        });
+
+        app.post('/savedata', function(req, res) {
+            res.render('savedata');
+            console.log("data saved successfully");
+        });
+        
+    var server = app.listen(PORT, function() {
+        console.log('router connected to http://localhost:3000');
+    });
